@@ -1,30 +1,26 @@
-import './Logo.css'
 import logo from '../../images/logo.svg'
-
-// function Logo() {
-//     return (
-//         <div className='logo'>
-//             <img src={logo} alt="React Bookshelf logo" />
-//             <p><strong>React</strong> Boookshelf</p>
-//         </div>
-//     )
-// }
-
-// export default Logo
-
-// rafce
-
 import React from 'react'
+import styled from 'styled-components'
 
+
+const LogoContainer = styled.div`
+    display: flex;
+    font-size: 30px;    
+`
+
+const LogoImage = styled.img`
+    margin-right: 10px;
+
+`
 const Logo = () => {
     return (
-        <div className='logo'>
-            <img
+        <LogoContainer>
+            <LogoImage
                 className='logo__img'
                 src={logo}
-                alt="React Bookshelf logo" />
-            <p><strong>React</strong> Bookshelf</p>
-        </div>
+                alt="Coders Bookshelf logo" />
+            <p><strong>Coders</strong> Bookshelf</p>
+        </LogoContainer>
     )
 }
 

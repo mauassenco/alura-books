@@ -1,33 +1,21 @@
-import './App.css';
-import Logo from './components/Logo';
-import profile from './images/perfil.svg'
-import cart from './images/sacola.svg'
+import Header from './components/Header'
+import styled from 'styled-components'
+import Search from './components/Search';
+import LastReleases from './components/LastReleases';
 
-const navItens = ['Categories', 'My Bookshelf', 'Favorites']
-const icons = [profile, cart]
+const AppContainer = styled.div`
+    width: 100vw;
+    height: 100vh;
+    background-image: linear-gradient(90deg, #002f52 35%, #326589 100%);
+`
 
 function App() {
   return (
-    <div className='App'>
-      <header className='App-header'>
-        <Logo />
-        <ul className='App-nav'>
-          {navItens.map((item) => (
-            <li className='App-nav-item'>
-              <p>{item}</p>
-            </li>
-          ))}
-        </ul>
-
-        <ul className="App-side-nav">
-          {icons.map((icon) => (
-            <li>
-              <img src={icon} alt="" />
-            </li>
-          ))}
-        </ul>
-      </header>
-    </div>
+    <AppContainer>
+      <Header />
+      <Search />
+      <LastReleases />
+    </AppContainer>
   );
 }
 
